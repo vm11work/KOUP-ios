@@ -1,0 +1,25 @@
+KOUP 웹설치 버전업데이트. 
+
+1. koup.kccworld.net/staticM/app에 
+  koup-0.X.X-release.apk 
+  koup-0.X.X-release.ipa
+  koup-0.X.X-sandbox.apk 
+  koup-0.X.X-sandbox.ipa
+ 파일들을 업로드 해준다. 
+
+2. koup.kccworld.net/staticM/app의
+
+Download.htm파일의 onclick 이벤트에서
+onclick="-----/koup-0.X.X-release.apk'
+onclick="-----/koup-0.X.X-release.plist'
+의 버전코드를 수정한다. 
+
+Download_dev.htm파일의 onclick 이벤트에서
+onclick="-----/koup-0.X.X-sandbox.apk'
+onclick="-----/koup-0.X.X-sandbox.plist'
+의 버전코드를 수정한다. 
+
+
+※ ipa파일은 https에 업로드 된 상태에서만 plist를 통해 자동설치 되기 때문에,
+개발앱파일도 운영서버(https://koup.kcc...)에 올릴수밖에 없다.
+
