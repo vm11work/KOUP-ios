@@ -1,0 +1,120 @@
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * From
+  * ----------------------------------------------------------
+  */
+
+/* checkBox style 01 */
+.check_st01 input[type="checkbox"]{display:none}
+.check_st01{position:relative;display:inline-block;vertical-align:middle;height:16px;color:#222;font-size:1.4rem;line-height:16px;padding:0 0 0 22px;font-weight:500;font-family:"noto_m"}
+.check_st01 input{position:absolute;opacity:0;cursor:pointer;height:0;width:0;}
+.checkmark{position:absolute;top:0;left:0;height:16px;width:16px;background-color:#fff;border:1px solid #c5c5c5;-webkit-border-radius:3px;border-radius:3px;}
+.check_st01 input:checked ~ .checkmark{background-color:#ee302a;border:1px solid #ee302a}
+.checkmark:after{content: "";position:absolute;display: none;}
+.check_st01 input:checked ~ .checkmark:after{display: block;}
+.check_st01 .checkmark:after{left:4px;top:1px;width:4px;height:7px;border: solid white;border-width: 0 2px 2px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-border-radius:2px;border-radius:2px;}
+.check_st01 input:disabled ~ .checkmark{background-color:#ddd;border:1px solid #c5c5c5}
+.check_st01 input:disabled ~ .checkmark:after{display: block;}
+.check_st01.reverse {padding:0 22px 0 0}
+.check_st01.reverse .checkmark {left:auto; right:0}
+
+/*Radio style 01*/
+.radio_st01 input[type="radio"]{display:none;}
+.radio_st01{color:#222;margin:0;font-size:1.4rem;line-height:16px;font-weight:500;font-family:"noto_m"}
+.radio_st01 input[type="radio"] + span{display:inline-block;width:16px;height:16px;margin:-2px 10px 0 0;vertical-align:middle;cursor:pointer;-webkit-border-radius:25px;border-radius:25px;border:1px solid #c5c5c5;background:#fff;position:relative}
+.radio_st01 input[type="radio"]:checked + span{position:relative}
+.radio_st01 input[type="radio"] + span:after{display:block;content:'';width:8px;height:8px;-webkit-border-radius:8px;border-radius:8px;background:#fff;position:absolute;top:3px;left:50%;margin-left:-4px;}
+.radio_st01 input[type="radio"]:checked + span{background:#ee302a;position:relative;border:1px solid #ee302a}
+.radio_st01 input[type="radio"]:checked + span:after{display:block;content:'';width:8px;height:8px;-webkit-border-radius:8px;border-radius:8px;background:#fff;}
+.radio_st01 input[type="radio"]:disabled + span{border:1px solid #ddd;background:#ddd}
+.radio_st01 input[type="radio"]:disabled + span:after{display:block}
+
+/*  Select BOX (Dropdown) style01*/
+.select_dropdown_st01{position:relative}
+.select_txt{border:1px solid #c5c5c5;height:40px;display:block;font-size:1.4rem;color:#333;padding:10px 40px 0 10px;font-weight:500;line-height:20px;position:relative;font-family:"noto_m"}
+.select_txt span{display:block;text-overflow:ellipsis;word-break:normal;white-space:nowrap;overflow:hidden;font-weight:500;font-family:"noto_m"}
+.select_txt strong{width:40px;height:38px;border-left:1px solid #c5c5c5;display:block;background:#ddd;position:absolute;top:0;right:0;}
+.select_txt strong:after{content:'';display:block;left:14px;top:13px;position:absolute;width:8px;height:8px;border:solid #333;border-width: 0 1px 1px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-border-radius:2px;border-radius:2px;}
+.option_list{display:none;border:1px solid #344b72;border-width:0 1px 1px;position:absolute;top:40px;left:0;width:100%;background-color:#fff;z-index:3}
+.select_txt.active strong{background:#344b72}
+.select_txt.active{border:1px solid #344b72}
+.select_txt.active strong:after{border: solid #fff;border-width: 0 1px 1px 0;-webkit-transform: rotate(-135deg);-ms-transform: rotate(-135deg);transform: rotate(-135deg);top:16px}
+.input_box{padding:10px}
+.option_list input{height:34px;border:1px solid #c5c5c5;background-color:#f6f6f6;color:#333;font-size:1.4rem;padding:0 15px;font-weight:500;font-family:"noto_m";line-height:20px;display:block;width:100%}
+.select_op{max-height:150px;overflow-y:auto;}
+.option_list li a{font-size:1.4rem;color:#222;line-height:16px;text-align:left;display:block;padding:9px 16px 8px;}
+.option_list li a:active,.option_list li a:hover{background-color:#bbcae2;color:#fff}
+
+/* Input style 01*/
+.inp_st01{height:40px;width:100%;display:block;border:1px solid #c5c5c5;padding:14px 10px;font-size:1.4rem;color:#333;line-height:20px;background-color:#fff;font-weight:500;font-family:"noto_m"}
+.inp_st01:focus{border:1px solid #344b72}
+.inp_st01:disabled,.inp_st01:disabled{color:#fff;background:#dddd}
+
+/*  검색화면 Input */
+.inp_search{position:relative;}
+.btn_search_close{background-color:#ddd;width:16px;height:16px;-webkit-border-radius:16px;border-radius:16px;position:absolute;top:12px;right:13px;text-indent:-999px;overflow:hidden;-webkit-transform:rotate(45deg);transform:rotate(45deg);}
+.btn_search_close:before{content:'';width:1px;height:11px;background:#222;-webkit-border-radius:2px;border-radius:2px;display:block;position:absolute;left:7px;top:3px;}
+.btn_search_close:after{content:'';width:1px;height:11px;background:#222;-webkit-border-radius:2px;border-radius:2px;display:block;position:absolute;left:7px;top:3px;-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+
+/* 셀렉트 안의 닫기 버튼  */
+.btn_search_in{border:0;right:55px;z-index:30}
+
+/* textarea style01*/
+/*.textarea_st01{width:100%;display:block;padding:15px;border:1px solid #c5c5c5;font-size:1.4rem;line-height:20px;color:#333;font-weight:500;font-family:"noto_m";height:100px;box-sizing:border-box}*/
+.textarea_st01{width:100%;display:block;padding:15px;border:1px solid #c5c5c5;font-size:1.4rem;line-height:20px;color:#333;font-weight:500;font-family:"noto_m";min-height:92px;box-sizing:border-box} /* 수정 이병위 */
+
+/* inp_date style */
+.inp_date{position:relative;clear:both;overflow:hidden;display:block;width:100%}
+.inp_date input{appearance: none;-webkit-appearance: none;height:40px;width:100%;float:left;display:block;border:1px solid #c5c5c5;padding:12px 10px 14px;font-size:1.4rem;color:#333;line-height:1.4rem;background-color:#fff;font-weight:500;font-family:"noto_m"}
+.inp_date input:focus{border:1px solid #344b72}
+.inp_date:after{content:"";width:38px;height:38px;background:#ddd url("../img/icon_calendar.jpg") center center no-repeat;display:block;background-size:14px auto;position:absolute;top:1px;right:1px;border-left:1px solid #c5c5c5}
+
+/* inpput date에 placeholder 사용 */
+input[type="date"]::before {content: attr(data-placeholder)}
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {display:none}
+
+/* inp_time style */
+.inp_time{position:relative;clear:both;overflow:hidden;display:block;width:100%;}
+.inp_time input{appearance: none;-webkit-appearance: none;height:40px;width:100%;float:left;display:block;border:1px solid #c5c5c5;padding:12px 10px 14px;font-size:1.4rem;color:#333;line-height:1.4rem;background-color:#fff;font-weight:500;font-family:"noto_m"}
+.inp_time input:focus{border:1px solid #344b72}
+.inp_time:after{content:"";width:38px;height:38px;background:#ddd url("../img/ico-time.png") center center no-repeat;display:block;background-size:16px auto;position:absolute;top:1px;right:1px;border-left:1px solid #c5c5c5}
+
+/* 수량 및 일자  */
+.num_count{border:1px solid #c5c5c5;display:inline-block;clear:both;overflow:hidden; vertical-align:middle}
+.num_count button{border:0}
+.num_count button,.num_count span{display:block;float:left;height:40px;min-width:40px;text-align:center}
+.num_count button{background:#ddd;}
+.num_count span{padding:11px 5px 0;font-size:1.4rem;line-height:1.4rem;color:#222;background:#fff;}
+.btn_minus,.btn_plus{position:relative;}
+.btn_minus:after{content:'';width:7px;height:1px;background:#222;display:block;position:absolute;top:50%;left:50%;margin-left:-3.5px}
+.btn_plus:before{content:'';width:7px;height:1px;background:#222;display:block;position:absolute;top:50%;left:50%;margin-left:-3.5px}
+.btn_plus:after{content:'';width:7px;height:1px;background:#222;display:block;position:absolute;top:50%;left:50%;margin-left:-3.5px;-webkit-transform:rotate(90deg);transform:rotate(90deg);}
+
+/* Form Layout */
+.form_half {display:flex; justify-content:center; align-items:center}
+.form_half .select_dropdown_st01,
+.form_half .inp_date {display:inline-block; width:48%}
+.form_half .select_basic + .select_basic {margin-left:4%}
+.form_center {display:inline-block; width:4%; text-align:center; vertical-align: middle}
+
+/*  input Error */
+.inp_error{border:1px solid #ef3631;position:relative;background:#fff url("../img/ico-error.png") right center no-repeat;background-size:28px auto}
+.inp_error:focus{border:1px solid #ef3631;}
+.error_message{font-size:1.2rem;line-height:1.7rem;color:#ef3631;margin-top:1rem}
+
+/* input Accept  */
+.inp_accept{position:relative;background:#fff url("../img/ico-accept.png") right center no-repeat;background-size:28px auto}
+
+/* date time input */
+.form_d_t{width:100%}
+.form_d_t label{width:48%}
+.form_d_t label + label{margin-left:4%}
+
+/*  input Basic*/
+input[type="search"] {position:relative;display:inline-block; width:100%; height:38px; padding:0 4rem 0 1.5rem; color:#333; font-size:1.4rem; font-family:noto_m; line-height:38px; background:url(../img/ico_search_ipt.png) no-repeat 100% 50%; border: 1px solid #c5c5c5; border-radius:0px; box-sizing:border-box; -webkit-appearance:none; -moz-appearance:none; appearance:none; outline:none}
+input[type="search"]:disabled{background:#ddd /*url(../img/ico_search_ipt.png) no-repeat 100% 50%*/;color:#fff}
+
+/*  Select BOX Basic*/
+select.select_basic {display:inline-block; width:100%; height:38px; padding:0 10px; color:#333; font-size:1.4rem; font-family:noto_m; letter-spacing:-0.05rem; line-height:36px; vertical-align:middle; background:url(../img/ico_select_arrow.png) no-repeat 100% 50%; border: 1px solid #c5c5c5; border-radius:0px; box-sizing:border-box; -webkit-appearance:none; -moz-appearance:none; appearance:none; outline:none}
+select.select_basic::-ms-expand {display:none}

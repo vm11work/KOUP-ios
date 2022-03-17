@@ -1,0 +1,25 @@
+
+"app_name" = "KOUP";
+
+"action_device" = "Device";
+"action_speech" = "Speech";
+"action_speech_custom" = "Speech (Custom)";
+"action_record_play" = "Autio Record Start";
+"action_record_stop" = "Autio Record Stop";
+"action_speech_play" = "Autio Speech Play";
+"action_speech_stop" = "Autio Speech Stop";
+"action_photo" = "Photo";
+"action_notification" = "Notification (Test)";
+
+"action_ok" = "Ok";
+"action_done" = "Done";
+"action_cancel" = "Cancel";
+"action_use" = "Use";
+"action_use_voice" = "Use Voice";
+"action_take" = "Take";
+"action_retake" = "Retake";
+
+"title_alert" = "Alert";
+"title_confirm" = "Confirm";
+
+"message_offline" = "You are offline!";

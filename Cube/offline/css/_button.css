@@ -1,0 +1,195 @@
+@charset "utf-8";
+/* ----------------------------------------------------------
+  * Button
+  * ----------------------------------------------------------
+*/
+
+/* Button icon */
+.ico_alam {background-image:url("../img/ico_alam.png")}
+.ico_alam.on::before {content:''; position:absolute; top:1.1rem; right:1.1rem; width:0.8rem; height:0.8rem; border-radius:0.4rem; background-color:#f47920}
+.ico_hback {background-image:url("../img/ico_hback.png")}
+.ico_search {background-image:url("../img/ico_search.png")}
+.ico_more {background-image:url("../img/ico_more.png")}
+.ico_menu {background-image:url("../img/ico_menu.png")}
+.ico_write {background-image:url("../img/ico_write.png")}
+.ico_modify {background-image:url("../img/ico_modify.png")}
+.ico_delete {background-image:url("../img/ico_delete.png")}
+.ico_list {background-image:url("../img/ico_list.png")}
+.ico_home {background-image:url("../img/ico_home.png")}
+.ico_notice {background-image:url("../img/ico_notice.png")}
+.ico_camera {background-image:url("../img/ico_camera.png")}
+.ico_attach_bk {background-image:url("../img/ico_attach_bk.png")}
+.ico_clock_bk {background-image:url("../img/ico_clock_bk.png")}
+.ico_picture_bk {background-image:url("../img/ico_picture_bk.png")}
+.ico_picture_bk2 {background-image:url("../img/ico_picture_bk2.png")}
+.ico_folder_bk2 {background-image:url("../img/ico_folder_bk2.png")}
+.ico_mike_bk {background-image:url("../img/ico_mike_bk.png")}
+.ico_mike_bk2 {background-image:url("../img/ico_mike_bk2.png")}
+.ico_listen_bk2 {background-image:url("../img/ico_listen_bk2.png")}
+.ico_camera_bk {background-image:url("../img/ico_camera_bk.png")}
+.ico_camera_bk2 {background-image:url("../img/ico_camera_bk2.png")}
+.ico_camera_blue {background-image:url("../img/ico_camera_blue.png")}
+.ico_picture {background-image:url("../img/ico_picture.png")}
+.ico_upload {background-image:url("../img/ico_upload.png")}
+.ico_view {background-image:url("../img/ico_view.png")}
+.ico_view_blue {background-image:url("../img/ico_view_blue.png")}
+.ico_refresh {background-image:url("../img/ico_refresh.png")}
+.ico_save {background-image:url("../img/ico_save.png")}
+.ico_setting {background-image:url("../img/ico_setting.png")}
+.ico_logout {background-image:url("../img/ico_logout.png")}
+.ico_listeasy_off {background-image:url("../img/ico_listeasy_off.png")}
+.ico_listeasy_on {background-image:url("../img/ico_listeasy_on.png")}
+.ico_listdetail_off {background-image:url("../img/ico_listdetail_off.png")}
+.ico_listdetail_on {background-image:url("../img/ico_listdetail_on.png")}
+.ico_tbm {background-image:url("../img/ico_tbm.png")}
+.ico_view_l_gy {background-image:url("../img/ico_view_l_gy.png")}
+.ico_online {background-image:url("../img/ico_online.png")}
+
+/* Off0Line Button icon */
+.offline_btn_01 {background-image:url("../img/offline_btn_01.png")}
+.offline_btn_02 {background-image:url("../img/offline_btn_02.png")}
+.offline_btn_03 {background-image:url("../img/offline_btn_03.png")}
+.offline_btn_04 {background-image:url("../img/offline_btn_04.png")}
+
+/* FOOTER BUTTON */
+.ico_worker{background-image:url("../img/ico_worker.png")}
+.ico_assign{background-image:url("../img/ico_assign.png")}
+.ico_review{background-image:url("../img/ico_review.png")}
+.ico_register{background-image:url("../img/ico_register.png")}
+.ico_checklist{background-image:url("../img/ico_checklist.png")}
+.ico_message{background-image:url("../img/ico_message.png")}
+.ico_prev{background-image:url("../img/ico_prev02.png")}
+.ico_next{background-image:url("../img/ico_next02.png")}
+.ico_addPer{background-image:url("../img/ico_addPer.png")}
+.ico_deletePer{background-image:url("../img/ico_deletePer.png")}
+.ico_storage{background-image:url("../img/ico_storage.png")}
+.ico_send{background-image:url("../img/ico_send.png")}
+.ico_present{background-image:url("../img/ico_present.png")}
+.ico_openG{background-image:url("../img/ico_openG.png")}
+.ico_cancle{background-image:url("../img/ico_cancle.png")}
+.ico_actionG{background-image:url("../img/ico_actionG.png")}
+.ico_result{background-image:url("../img/ico_result.png")}
+.ico_erp{background-image:url("../img/ico_erp.png")}
+.ico_relevant{background-image:url("../img/ico_relevant.png")}
+.ico_reject{background-image:url("../img/ico_reject.png")}
+.ico_pass{background-image:url("../img/ico_pass.png")}
+.ico_equipment{background-image:url("../img/ico_equipment.png")}
+.ico_field{background-image:url("../img/ico_field.png")}
+.ico_picbasket {background-image:url("../img/ico_picbasket.png")}
+.ico_chfolder {background-image:url("../img/ico_chfolder.png")}
+.ico_delpic {background-image:url("../img/ico_delpic.png")}
+.ico_chkconfirm {background-image:url("../img/ico_chkconfirm.png")}
+.ico_chkreturn {background-image:url("../img/ico_chkreturn.png")}
+.ico_recomandapp {background-image:url("../img/ico_recomandapp.png")}
+.ico_resetpw {background-image:url("../img/ico_resetpw.png")}
+
+/* Basic Button */
+.btn, a.btn {position:relative; display:inline-block; border:none; font-size:0; background-color:transparent; background-position:50%; background-repeat:no-repeat; vertical-align:middle}
+
+/* Navigation Button */
+.nav_btn {margin-right:0.4rem; width:38px; height:38px; background-size:cover}
+.nav_btn:last-of-type {margin-right:0}
+
+/* Footer Button */
+.footer_btn {width:5rem; height:5rem; background-position:50% 18%; background-size:2.4rem}
+.footer_btn > .txt {position:absolute; display:inline-block; left:-2rem; bottom:1.0rem; width:90px; height:10px; color:#FFF; font-size:1.1rem; text-align:center}
+.footer_btn > .picnum { content:""; position:absolute; display:inline-block; top:4px; right:0px; padding:0 0.6rem; line-height:1.4rem; color:#FFF; font-size:1.0rem; font-family:"noto_r"; border-radius: 0.7rem; background-color:#f47920 }
+
+/* Contents Button */
+.contents_btn {margin-right:7px; width:30px; height:30px; background-size:60%}
+.contents_btn:last-of-type {margin-right:0}
+.contents_btn.round {border:1px solid #c5c5c5; border-radius:50%; background-color:#FFF;}
+.contents_btn.layer {position:relative; margin:0;  width:83px; height:80px; border-right:1px solid #DDD; background-size:35%; background-position:50% 30%}
+.contents_btn.layer:last-of-type {border-right:none}
+.contents_btn.layer > .txt {position:absolute; display:inline-block; left:0; bottom:1.0rem; width:100%; height:auto; color:#222; font-size:1.3rem; font-family:"noto_m"; text-align:center}
+
+/*  List Type Button */
+.list_btn {display:inline-block; margin-right:4px; width:40px; height:40px; background-position:50%; background-repeat:no-repeat; background-color:#FFF; background-size:100%; border:1px solid #c5c5c5; border-radius:50%; vertical-align:middle;}
+.list_btn.active {background-color:#dfe6f1; border-color:#344b72}
+.list_btn.ico_easy {background-image:url("../img/ico_listeasy_off.png")}
+.list_btn.ico_detail {background-image:url("../img/ico_listdetail_off.png")}
+.list_btn.ico_easy.active {background-image:url("../img/ico_listeasy_on.png")}
+.list_btn.ico_detail.active {background-image:url("../img/ico_listdetail_on.png")}
+.list_btn:last-of-type {margin-right:0}
+
+/* Basic UI Button */
+.ui_btn {position:relative; display:inline-block; width:100%; height:4.2rem; color:#444; font-size:1.4rem; font-family:"noto_m"; line-height:4.0rem; text-align:center; vertical-align:middle; border:none; border-radius:2px; background-color:#c9c9c9; cursor:pointer}
+.ui_btn.btn_blue {color:#FFF; background-color:#253859}
+.ui_btn.btn_lightblue {color:#FFF; background-color:#0e5fab}
+.ui_btn.btn_aqua {color:#FFF; background-color:#0eab9b}
+.ui_btn.btn_blue_border {color:#253859; background-color:#fff;border:1px solid #253859}
+.ui_btn.contents {padding:0 8px; width:auto; height:3.8rem; color:#4572bf; line-height:3.8rem; background-color: #FFF; border:1px solid #4572bf}
+.btn_inner_con {position:relative; display:inline-block; width:100%; height:3.2rem; color:#4574bc; font-size:1.3rem; font-family:"noto_b"; line-height:3.0rem; text-align:center; vertical-align:middle; border:none; border-radius:2px;background-color: #f6f6f6;}
+.btn_inner_con .ico {display:inline-block; margin:-2px 3px 0 0; width:20px; height:16px; vertical-align:middle; background-repeat:no-repeat; background-size:contain}
+.btn_inner_con.blue {background-color:#4574bc; color:#FFF; font-family:"noto_m"; }
+.btn_inner_con +.btn_inner_con:before {content:""; position:absolute; left:0; top:50%; margin-top:-6px; width:1px;height:13px; background-color:#c5c5c5}
+
+/* Up/Down Button */
+.btn_arrow {z-index:100; position:absolute; display:inline-block; top:0px; right:0px; width:60px; height:60px; border:none; background-color:transparent}
+.btn_arrow::after {content:""; display:inline-block; width:10px; height:10px; border:solid #6b8bbc; border-width:0 1px 1px 0}
+.btn_arrow.down::after {margin-top:-6px; -webkit-transform:rotate(45deg); -ms-transform:rotate(45deg); transform:rotate(45deg);}
+.btn_arrow.up::after {margin-top:6px; -webkit-transform:rotate(-135deg); -ms-transform: rotate(-135deg); transform: rotate(-135deg)}
+
+/* wrap, group */
+.btn_wrap {display:flex; justify-content:center; align-items:center}
+.tbl_view  .btn_wrap {justify-content:space-between}
+.btn_wrap .ui_btn + .ui_btn {margin-left:4%}
+.btn_wrap .ui_btn.contents  + .ui_btn.contents,
+.btn_wrap.sign_btn .ui_btn + .ui_btn {margin:0}
+
+/* Off-line Index Button */
+.off_index_warp {display:flex; flex-wrap:wrap; align-items:stretch; padding:0 15px;}
+.off_index_warp button{display:block; flex-direction:column; padding:20px 10px; margin-top:15px; width:calc((100% - 10px) / 2); height:calc((100vw - 40px) / 2); text-align:left; border:1px solid #f2f2f2; border-radius:16px; background-color:#FFF; background-repeat:no-repeat; background-position:bottom right; background-size:45%}
+.off_index_warp button:nth-of-type(2n-1) {margin-right:10px}
+.off_index_warp .tit {display:inline-block; color:#113c85; font-size:1.8rem; font-family:"noto_b"; letter-spacing:-0.05rem}
+.off_index_warp .tit > .txt {display:inherit; color:#222; }
+.off_index_warp .sub_txt {display:inline-block; width:70%; color:#666; font-size:1.5rem; font-family:"noto_m"; line-height:1.5rem; letter-spacing:-0.05rem}
+.off_index_warp .sub_txt {display:inline-block; margin-top:8px; width:70%; color:#888; font-size:1.5rem; font-family:"noto_m"; line-height:1.9rem; letter-spacing:-0.05rem}
+
+/* Tag */
+.tag {position:relative; display:inline-block; padding:0 2rem 0 1rem; height:2.6rem; color:#FFF; font-size:1.3rem; line-height:2.6rem; border-radius:0.2rem; background-color:#344b72}
+.tag::before {position:absolute; display:inline-block; top:1rem; right:0.4rem; width:0.7rem; height:0.6rem;;  background:url("../img/ico-del.png") 0 0 no-repeat; background-size:contain; content:""; }
+.tag.disable {padding:0 1rem}
+.tag.disable::before {content:none; }
+.tag + .tag {margin-left:0.5rem}
+
+
+/* Toggle Button */
+input.switch {position:absolute; left:-3000%}
+input.switch + label {overflow:hidden;display:inline-block; position:relative; width:6.4rem; height:3rem; color:#FFF; font-size:1.4rem; font-family:"noto_m"; line-height:1.8rem; background-color:#CCC; border:0.1rem solid #C5C5C5; border-radius:2rem; transition: all 0.2s}
+input.switch + label:before {content:"정순"; position: absolute; right:3.8rem; top:0.4rem; width:2rem; height:2rem; text-align:left; text-indent:-3.0rem; vertical-align: middle; background-color:#FFF; border-radius:50%; box-shadow:0 0 2px rgb(0,0,0,0.4); transition: all 0.2s}
+input.switch:checked + label::before {right:0.4rem; background-color:#ccd9eb}
+input.switch:checked + label {background-color: #344b72}
+input.switch + label::after {content:"역순"; position: absolute; right:0.6rem; top:0.4rem; text-align:left; transition: all 0.2s;}
+input.switch:checked + label::after,
+input.switch.power:checked + label::after{right:-50px}
+input.switch.power + label {font-size:1.5rem}
+input.switch.power + label:before {content:"on"; text-align:left; text-indent:-2.4rem}
+input.switch.power + label::after {content:"off"; right:1.0rem; text-align:left;}
+input.switch.obtain + label:before {content:"승인"}
+input.switch.obtain + label::after {content:"거부"}
+.switch_wrap + .switch_wrap {margin-left:15px}
+
+/* Label */
+label.d_day {display:inline-block; padding:0 16px; height:20px; color:#ff0000; font-size:1.3rem; font-family:"noto_b"; text-align:center; line-height:18px; vertical-align:middle; background-color:#ffdfdf; border-radius:13px;}
+label.d_day::before{content:"D-"}
+.stat_box {display:flex; justify-content:center; align-items:center;margin-top:20px}
+label.star {display:block; width:17px; height:17px; background: url("../img/label_star.png") 0 0 no-repeat #e3e3e3; background-size:contain}
+label.star.on {background-color:#ffae00}
+label.star + .star {margin-left:20px}
+label.manage {display:inline-block; font-size:1.4rem; font-family:"noto_m";}
+label.manage + label {margin-left:20px}
+label.manage::before {content:""; display:inline-block; width:20px; height:20px; margin:-2px 8px 0 0; border-radius:50%; vertical-align:middle}
+label.manage.blue {color:#344b72}
+label.manage.blue::before {background-color:#344b72}
+label.manage.gray {color:#bfc4cc}
+label.manage.gray::before {background-color:#bfc4cc}
+label.manage.red {color:#ee302a}
+label.manage.red::before {background-color:#ee302a}
+label.manage.ing::before {background-color:#344b72  }
+label.manage.end::before {background-color:#bfc4cc; }
+label.manage.ing.txt::after {content:"진행중";  color:#344b72; }
+label.manage.end.txt::after {content:"마감"; color:#bfc4cc; }
+label.manage.ing.txt.sign::after {content:"서명완료"}
+label.manage.end.txt.sign::after {content:"미서명"}
+

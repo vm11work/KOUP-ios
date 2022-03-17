@@ -1,0 +1,12 @@
+@charset "utf-8";
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * By 이병위
+  * ----------------------------------------------------------
+*/
+
+.function_box {position:relative; float:right;font-family:"noto_m"}
+.function_layer {position:absolute; z-index:100; top:30px; right:0; display:flex; background-color:#FFF; border:1px solid #5e7192; border-radius:4px}
+.btn_layer_close{position:absolute; left:50%; top:-32px; margin-left:-11px; width:22px; height:22px; background-color:rgba(0,0,0,0.8); border-radius:50%; border:none; text-indent:-9999px;}
+.btn_layer_close:before{content:''; position:absolute; display:block; left:5px; top:11px; width:12px; height:1px; background:#FFF; -webkit-border-radius:1px; border-radius:1px; transform:rotate(-45deg)}
+.btn_layer_close:after {content:''; position:absolute; display:block; left:5px; top:11px; width:12px; height:1px; background:#FFF; -webkit-border-radius:1px; border-radius:1px; transform:rotate(45deg);}

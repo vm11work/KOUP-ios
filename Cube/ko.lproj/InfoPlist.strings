@@ -1,0 +1,9 @@
+
+
+//"CFBundleName" = "KOUP";  //build scheme별 다르게 적용됨.
+//"CFBundleDisplayName" = "KOUP";  //build scheme별 다르게 적용됨.
+
+"NSCameraUsageDescription" = "사진 및 이미지 업로드를 위해 사용합니다";
+"NSPhotoLibraryUsageDescription" = "사진 및 이미지 업로드를 위해 사용합니다";
+"NSLocationAlwaysUsageDescription" = "맞춤 정보를 위해 위치 정보를 활용합니다";
+"NSLocationWhenInUseUsageDescription" = "맞춤 정보를 위해 위치 정보를 활용합니다";

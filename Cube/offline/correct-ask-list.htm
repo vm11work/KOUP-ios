@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- SEO START -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KCC">
+    <meta property="og:title" content="KCC">
+    <meta property="og:description" content="PMIS">
+    <meta property="og:image" content="img/default.png">
+    <meta property="og:url" content="/">
+    <meta name="keywords" content="KCC">
+    <meta name="description" content="PMIS">
+    <title>시정조치요청 | KCC 모바일 현장 협업 시스템</title>
+    <!-- SEO END -->
+    <!-- css resources -->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet" />
+<!-- jquery & plug-in -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jutils-20200826.js"></script>
+<script src="js/jutils-offline-20200826.js"></script>
+<script language = "javascript">
+<!--
+///////////////////////
+
+$(document).ready (function () 
+{
+	try
+	{
+		offlineCorrectAskList ();
+	} catch (e) { console.log (e); }
+});
+
+function offlineDeleteData ()
+{
+	try
+	{
+		var list = [];
+		$.each ($("input[name='delete']:checked"), function () {
+			list.push ($(this).val ());
+        });
+		
+	    JData.del ({
+	        list : list,
+	        error: function (response) 
+	        {
+                console.log ("error => " + response);
+	        },
+	        success: function (response) 
+	        {
+        	    console.log ("success => " + response);
+        	    
+        		JNative.go ("correct-ask-list.htm");
+	        }
+	    });		
+	} catch (e) { console.log (e); }
+}
+
+function offlineEditData (name)
+{
+	try
+	{
+		console.log ("edit data => " + name);
+		
+		JNative.go ("correct-ask-write.htm?" + name);
+	} catch (e) { console.log (e); }
+}
+
+function offlineCorrectAskList ()
+{
+	try
+	{
+		var menu = "correct-ask";
+
+	    JData.all ({
+	        menu : menu,
+	        error: function (response) 
+	        {
+    	        var ul = document.querySelector ("ul[id='data_list']"); 
+    	        ul.innerHTML = "";
+    	        
+    			var head = stub_item_nodata; ul.innerHTML = head;
+	        	
+                console.log ("error => " + response);
+	        },
+	        success: function (response) 
+	        {
+    	        var ul = document.querySelector ("ul[id='data_list']"); 
+    	        ul.innerHTML = "";
+	        	
+        	    var json = JSON.parse (response); var value = json ["response"];
+        	    if (0 < json.response.length) 
+        	    {
+        	        // add head
+					var head = stub_item_head;
+	    	        ul.innerHTML += head;
+        	        
+        	    	// add data 
+        		    for (var each in json.response) 
+        			{
+            	        console.log ("seq" + " : " + json ["response"][each]["seq"]);
+    	                console.log ("date" + " : " + json ["response"][each]["date"]);
+    	                console.log ("menu" + " : " + json ["response"][each]["menu"]);
+    	                console.log ("name" + " : " + json ["response"][each]["name"]);
+
+    	                var id = "data_item" + json ["response"][each]["seq"];
+    	                var date = json ["response"][each]["date"]; date = date.substring (0, 10);
+    	                var menu = "조치요청"; // var menu = json ["response"][each]["menu"];
+    	                var name = json ["response"][each]["name"];
+    	                var thumb = json ["response"][each]["thumb"];
+    	                var thumbstyle = " style=\"display: none;\"";
+    	                var deadlinestyle = " style=\"display: block;\"";
+    	                var voicestyle = " disabled style=\"opacity: 0.3;\"";
+
+                	    var data = JSON.parse (json ["response"][each]["data"]);
+
+    	                var deadline = data ["deadline"];
+    	                var title = data ["title"];
+    	                var content = data ["content"];
+    	                var image = data ["image"]; if (image) thumbstyle = "";
+    	                var voice = data ["voice"]; if (voice) voicestyle = "";
+
+    	                console.log ("deadline" + " : " + data ["deadline"]); 
+    	                console.log ("title" + " : " + data ["title"]); 
+    	                console.log ("content" + " : " + data ["content"]); 
+    	                console.log ("image" + " : " + data ["image"]); 
+    	                console.log ("voice" + " : " + data ["voice"]); 
+
+    	                var item = stub_item_data;
+    	                item = item.replace (/#DATE#/g, date);
+    	                item = item.replace (/#MENU#/g, menu);
+    	                item = item.replace (/#NAME#/g, name);
+    	                item = item.replace (/#CONTENT#/g, content);
+    	                item = item.replace (/#THUMB#/g, thumb);
+    	                item = item.replace (/#THUMBSTYLE#/g, thumbstyle);
+    	                item = item.replace (/#VOICE#/g, voice);
+    	                item = item.replace (/#VOICESTYLE#/g, voicestyle);
+    	                item = item.replace (/#DEADLINE#/g, deadline);
+    	                item = item.replace (/#DEADLINESTYLE#/g, deadlinestyle);
+    	                ul.innerHTML += item;
+        			}
+        	    }
+        	    else 
+				{
+        			var head = stub_item_nodata; ul.innerHTML = head;
+        	    }
+        	    console.log ("success => " + response);
+	        }
+	    });
+	} catch (e) { console.log (e); }
+}
+//-->
+</script>
+</head>
+
+<body>
+
+    <div id="kccWrap">
+        
+        <!-- header -->
+        <header class="header_wrap">
+            <div class="kccHeader">
+                <div class="header_inner">
+                    <button type="button" class="btn nav_btn ico_hback" onclick="JNative.go ('index.htm')">뒤로</button>
+                </div>
+                <h2>시정조치요청</h2>
+                <div class="header_inner">  
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- Main content Block -->
+        <div class="kccContent" name="content">
+            
+<!-- 시정조치요청  -->
+<div class="notice_sec">
+<ul id="data_list" class="notice_list notice_list02">
+<li><a href="javascript:void(0);"><div class="rit_list_txt n_ty01" style="width: 100%; text-align: center;">로딩중...</div></a></li>
+</ul>
+</div>
+<!--// 시정조치요청  -->
+            
+        </div>
+        <!--// Main content Block -->
+
+        <!-- footer -->
+        <footer class="footer_wrap">
+            <div class="kccafooter">
+                <button type="button" class="btn footer_btn ico_write" onclick="JNative.go ('correct-ask-write.htm')"><span class="txt">요청등록</span></button>
+                <button type="button" class="btn footer_btn ico_online" onclick="JNative.online ();"><span class="txt">온라인</span></button>
+				<button type="button" class="btn footer_btn ico_delete" onclick="offlineDeleteData ();"><span class="txt">선택삭제</span></button>
+            </div>
+        </footer>
+        <!--// footer -->
+    </div>
+</body>
+</html>
+
+
+
+
+

@@ -1,0 +1,57 @@
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * Resets
+  * ----------------------------------------------------------
+  */
+
+/* mobile reset 범용 */
+* {-webkit-text-size-adjust:none; box-sizing:border-box}
+html, body {position:relative; height:100%;}
+body, form, div, p, h1, h2, h3, h4, h5, h6, dl, dt, dd, ul, ol, li, fieldset, th, td, input, textarea,button,select {font-family:"Noto_r", "Helvetica","Apple SD Gothic Neo",sans-serif; font-weight:normal; margin:0; padding:0}
+body {-webkit-tap-highlight-color:rgba(0,0,0,0); -webkit-touch-callout:none; -webkit-user-select:none}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block; font-size:100%}
+li {list-style:none}
+a {color:inherit; text-decoration:none}
+a:hover, a:active {text-decoration:none}
+a[href^="tel"] {font-style:normal}
+address, caption, em, var {font-style:normal; font-weight:normal}
+input, textarea, select {letter-spacing:normal}
+ul, ol, dl li {list-style:none}
+/* ul:after,ol:after {content:'';display:block;clear:both;} */
+fieldset, img {border:0}
+legend, caption {visibility:hidden; overflow:hidden; width:0; height:0; font-size:0; line-height:0}
+em {font-style:normal; font-weight:normal}
+strong {font-weight:bold}
+h1, h2, h3, h4, h5, h6 {font-weight:700;-webkit-font-smoothing:subpixel-antialiased;}
+img {border:0; vertical-align:top}
+hr {display:none}
+table {border-collapse:collapse; border-spacing:0}
+br {letter-spacing:normal}
+p {letter-spacing:normal}
+textarea {appearance:none; -webkit-appearance:none; box-shadow:none; outline-style:none; border-radius:0; -webkit-border-radius:none; resize:none}
+textarea::-webkit-input-placeholoder {-webkit-text-size-adjust:none}
+button,input[type="button"],input[type="submit"],input[type="reset"],input[type="file"] {border-radius:0;; -webkit-border-radius:none; -webkit-appearance:button; outline-style:none;}
+input[type="text"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="email"],
+input[type="checkbox"],
+input:checked[type="checkbox"],
+input[type="radio"],
+input:checked[type="radio"]{-webkit-appearance:none; -moz-appearance:none; appearance:none; box-shadow:none; border-radius:0;; -webkit-border-radius:none; outline-style:none; vertical-align:middle}
+input[type="text"]:disabled,
+input[type="password"]:disabled,
+input[type="search"]:disabled,
+input[type="number"]:disabled,
+input[type="email"]:disabled {-webkit-opacity:1}
+input[type="text"]:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="email"]:focus,
+input[type="search"]::-webkit-search-cancel-button {-webkit-appearance: none; outline-style:none;}
+input:focus {outline-style:none;}

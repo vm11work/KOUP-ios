@@ -1,0 +1,23 @@
+"app_name" = "KOUP";
+"action_device" = "디바이스";
+"action_speech" = "음성지원";
+"action_speech_custom" = "음성지원 (커스텀)";
+"action_record_play" = "음성녹취 (시작)";
+"action_record_stop" = "음성녹취 (종료)";
+"action_speech_play" = "녹취내용 (듣기)";
+"action_speech_stop" = "녹취내용 (종료)";
+"action_photo" = "사진촬영";
+"action_notification" = "푸시알림 (테스트)";
+
+"action_ok" = "승인";
+"action_done" = "완료하기";
+"action_cancel" = "취소하기";
+"action_use" = "사용하기";
+"action_use_voice" = "사용하기";
+"action_take" = "음성녹취";
+"action_retake" = "다시녹취";
+
+"title_alert" = "알림창";
+"title_confirm" = "확인창";
+
+"message_offline" = "오프라인 상태입니다!";

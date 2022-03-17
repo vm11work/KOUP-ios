@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- SEO START -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KCC">
+    <meta property="og:title" content="KCC">
+    <meta property="og:description" content="PMIS">
+    <meta property="og:image" content="img/default.png">
+    <meta property="og:url" content="/">
+    <meta name="keywords" content="KCC">
+    <meta name="description" content="PMIS">
+    <title>오프라인모드 index | KCC 모바일 현장 협업 시스템</title>
+    <!-- SEO END -->
+    <!-- css resources -->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet" />
+<!-- jquery & plug-in -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jutils-20200826.js"></script>
+<script src="js/jutils-offline-20200826.js"></script>
+<script language = "javascript">
+<!--
+///////////////////////
+
+$(document).ready (function () 
+{
+	try
+	{
+	    JRole.init ({
+	        success: function (response) 
+	        {
+        	    var json = JSON.parse (response); 
+        	    var role = json ["role"]
+        	    
+        	    // 협력업체 
+        	    if ("2" == role)
+				{
+	                $("#correct_report").css ("opacity", 1);
+	                $("#correct_report").attr ("disabled", false);
+	                $("#prevent_report").css ("opacity", 1);
+	                $("#prevent_report").attr ("disabled", false);
+        	    }
+        	    
+        	    // KCC직원 
+        	    if ("3" == role)
+				{
+	                $("#correct_ask").css ("opacity", 1);
+	                $("#correct_ask").attr ("disabled", false);
+	                $("#correct_report").css ("opacity", 1);
+	                $("#correct_report").attr ("disabled", false);
+	                $("#prevent_ask").css ("opacity", 1);
+	                $("#prevent_ask").attr ("disabled", false);
+	                $("#prevent_report").css ("opacity", 1);
+	                $("#prevent_report").attr ("disabled", false);
+        	    }
+
+        	    // 20200817 테스트
+        	    /*
+                $("#correct_ask").css ("opacity", 1);
+                $("#correct_ask").attr ("disabled", false);
+                $("#correct_report").css ("opacity", 1);
+                $("#correct_report").attr ("disabled", false);
+                $("#prevent_ask").css ("opacity", 1);
+                $("#prevent_ask").attr ("disabled", false);
+                $("#prevent_report").css ("opacity", 1);
+                $("#prevent_report").attr ("disabled", false);
+                */
+        	    
+        	    console.log ("JRole.init success => " + response);
+	        }
+	    });
+		
+	} catch (e) { console.log (e); }
+});
+
+///////////////////////
+//-->
+</script>
+</head>
+
+<body>
+
+    <div id="kccWrap">
+        
+        <!-- header -->
+        <header class="header_wrap">
+            <div class="kccHeader">
+                <div class="header_inner">
+                    <button type="button" class="btn nav_btn ico_hback" onclick="JNative.online ();">뒤로</button>
+                </div>
+                <h2>오프라인모드</h2>
+                <div class="header_inner">  
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- Main content Block -->
+        <div class="kccContent bg_gray" name="content" >
+            <h2 class="title no_bd mt30 pl15 ">
+                현재 오프라인모드 상태 입니다.
+            </h2>
+						
+            <div class="off_index_warp">
+                <button id="correct_ask" type="button" class="offline_btn_01" onclick="JNative.go ('correct-ask-list.htm')" disabled style="opacity: 0.3;">
+                    <h3 class="tit">시정조치<span class="txt">요청</span></h3>
+                    <p class="sub_txt">부적합 및<br>시정지시사항</p>
+                </button>
+                <button id="correct_report" type="button" class="offline_btn_02" onclick="JNative.go ('correct-report-list.htm')" disabled style="opacity: 0.3;">
+                    <h3 class="tit">시정조치<span class="txt">결과</span></h3>
+                    <p class="sub_txt">부적합 및<br>시정지시사항<br>결과등록</p>
+                </button>
+                <button id="prevent_ask" type="button" class="offline_btn_03" onclick="JNative.go ('prevent-ask-list.htm')" disabled style="opacity: 0.3;">
+                    <h3 class="tit">재해예방<span class="txt">요청</span></h3>
+                    <p class="sub_txt">부적합 및<br>시정지시사항 </p>
+                </button>
+                <button id="prevent_report" type="button" class="btn offline_btn_04" onclick="JNative.go ('prevent-report-list.htm')" disabled style="opacity: 0.3;">
+                    <h3 class="tit">재해예방<span class="txt">조치결과</span></h3>
+                    <p class="sub_txt">부적합 및<br>시정지시사항<br>결과등록</p>
+                </button>
+            </div>
+            
+        </div>
+        <!--// Main content Block -->
+
+        <!-- footer -->
+        <footer class="footer_wrap">
+            <div class="kccafooter">
+                <button type="button" class="btn footer_btn ico_online" onclick="JNative.online ();"><span class="txt">온라인</span></button>
+            </div>
+        </footer>
+        <!--// footer -->
+    </div>
+</body>
+</html>

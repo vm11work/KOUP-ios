@@ -1,0 +1,37 @@
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * View Page
+  * ----------------------------------------------------------
+*/
+  /* 상세보기 style 01*/
+.tit_list h3{font-size:1.4rem;color:#222;font-weight:bold;margin-bottom:10px;line-height:2rem}
+.tit_list{padding:28px 15px;display:block;clear:both;overflow:hidden}
+.tit_list{border-bottom:1px solid #c5c5c5;}
+.view_txt{padding:25px 15px;border-bottom:1px solid #c5c5c5;}
+.view_txt img{max-width:100%}
+.view_txt p{font-size:1.4rem;color:#222;line-height:2rem;font-weight:500}
+.view_file{padding:15px;border-bottom:1px solid #c5c5c5;}
+.tit_view{font-size:1.4rem;color:#222;font-weight:bold;margin-bottom:12px;padding-left:26px;line-height:2rem}
+.tit_file{background:url("../img/icon_file.png") 0 center no-repeat;background-size:17px auto}
+.file_list{border:1px solid #c5c5c5;border-width:1px 1px 0 1px}
+.file_list li a{font-size:1.2rem;font-weight:500;color:#444;padding:10px 10px 10px 33px;display:block;}
+.file_list li a:active{color:#344b72;font-weight:bold;background-color:#bbcae2}
+.file_list li{border-bottom:1px solid #c5c5c5;}
+.file_img{background:url("../img/ico_view_gy.png") 8px center no-repeat;background-size:17px auto}
+.file_img:active{background:url("../img/ico_view_bl.png") 8px center no-repeat;background-size:17px auto}
+.file_download{background:url("../img/ico_download_gy.png") 8px center no-repeat;background-size:17px auto}
+.file_download:active{background:url("../img/ico_download_bl.png") 8px center no-repeat;background-size:17px auto}
+
+.view_comment{padding:15px;border-bottom:1px solid #c5c5c5;}
+.tit_comment{background:url("../img/icon_comment.png") 0 center no-repeat;background-size:17px auto}
+.comment_list li:first-child{padding-bottom:15px}
+.comment_list li + li{padding:15px 0;border-top:1px solid #c5c5c5}
+.comment_list li:last-child{padding-bottom:0}
+.comment_list li p{font-size:1.4rem;color:#222;font-family: 'noto_m';line-height:2rem;margin-bottom:5px;position:relative;padding-right:21px}
+.user_name_date strong,.user_name_date span{color:#444;font-size:1.4rem;font-family: 'noto_m';font-weight:500}
+.user_name_date span{padding-left:10px;margin-left:6px;position:relative;}
+.user_name_date span:after{height:10px;width:1px;background:#cbcbcb;position:absolute;top:6px;left:0;content:'';}
+.btn_comment{position:absolute;top:2px;right:0;display:block;width:20px;height:20px;text-indent:-9999px;overflow:hidden;background:url("../img/ico_delete_gy.png") center center no-repeat;background-size:125% auto}
+/* .btn_comment b{background:#2d3038;width:3px;height:3px;display:block;position:absolute;top:5px;right:0;} */
+
+.notice_sec{height:100%;overflow-y:auto}

@@ -1,0 +1,250 @@
+
+/* 리스트 style 01*/
+.notice_list h3{font-size:1.4rem;line-height:2rem;color:#222;font-weight:bold;margin-bottom:10px;text-overflow:ellipsis;word-break:normal;white-space:nowrap;overflow:hidden;position:relative;display:inline-block;padding-right:40px;max-width:100%;width:auto}
+.notice_list .lef_date + h3 {margin-bottom:0}
+.notice_list h3.multi_line {padding-right:0; height:auto; line-height:2.2rem; overflow:auto; white-space:normal; word-break: keep-all}
+.notice_list > li a{padding:15px 15px;display:block;clear:both;overflow:hidden}
+.notice_list02 > li a{display:flex;align-items:center;}
+.notice_list > li{border-bottom:1px solid #c5c5c5;position:relative;}
+.notice_list > li > .check_st01 {z-index: 100; position:absolute; top:15px; right:10px}
+.notice_date{clear:both;overflow:hidden;}
+.lef_date{float:left}
+.lef_date strong{color:#666;line-height:1.3rem;font-size:1.3rem;text-align:left;position:relative;padding-right:9px}
+.lef_date strong:after{width:1px;height:10px;background:#cbcbcb;content:'';display:block;position:absolute;top:50%;right:0;margin-top:-5px}
+.lef_date span{color:#666;line-height:1.3rem;font-size:1.3rem;text-align:left;padding-left:4px}
+.rit_date{float:right;color:#666;line-height:2rem;font-size:1.3rem;text-align:left}
+
+/* 리스트 style 02 */
+.thum_img{position:relative;float:left;width:100px;height:100px;border:1px solid #ddd;display:flex;align-items:center; background:url("../img/ico_noimg.png") 50% 50% no-repeat; background-size:33px 33px}
+.thum_img img{max-width:100%;max-height:100%;margin:0 auto}
+.i-day{position:absolute;top:0;left:0;min-width:40px;height:20px;color:#fff;background:rgba(243,122,33,.8);display:block;font-weight:bold;font-size:11px;text-align:center}
+.rit_list_txt{width:calc(100% - 100px);padding-left:2rem;float:left}
+.rit_list_txt li{clear:both;overflow:hidden;line-height:2rem}
+.rit_list_txt li strong{width:50px;display:block;font-size:1.4rem;color:#222;float:left;font-family: 'noto_b';}
+.rit_list_txt li span{width:calc(100% - 50px);display:block;color:#444;font-size:1.4rem;float:left;padding-left:10px;position:relative;font-weight:500;font-family: 'noto_m';}
+.rit_list_txt li span:before{content:'';width:1px;height:10px;background:#cbcbcb;display:block;position:absolute;left:0;top:5px}
+.rit_list_txt p{color:#444;font-size:1.4rem;font-family:'noto_m';font-weight:500;display:block;overflow:hidden;text-overflow:ellipsis;white-space:normal;line-height:1.4;height:2.8em;text-align:left;word-wrap:break-word;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;}
+
+/* 트리메뉴(개발에서 사용) */
+.tree_list_wrap{background:#fafafa;border:1px solid #e9e9e9;}
+.tree_list_wrap .jstree{padding:20px 0;}
+.jstree{min-height:200px;}
+.jstree.border{border:1px solid #ddd;}
+.treelist_icon{display:inline-block; width:16px;height:16px;vertical-align:middle;background-size:16px 16px !important;}
+.icon_folder{background:url("../img/icon_folder.png") center no-repeat !important; background-size:16px 16px !important;}
+.icon_user{background:url("../img/icon_user.png") center no-repeat !important;background-size:16px 16px !important;}
+.icon_building{background:url("../img/icon_building.png") center no-repeat !important;background-size:16px 16px !important;}
+.icon_tree{background:url("../img/icon_tree.png") center no-repeat !important;background-size:16px 16px !important;}
+
+/************************** By 이병위 **************************/
+/* CheckBox + 리스트  */
+.notice_list > li.head {display:flex; justify-content:space-between; align-items:center; padding:10px 15px !important; min-height:60px} /* 추가 이병위 2020.06.22 */
+.notice_list.list_chk > li {position:relative; padding-left:35px}
+.notice_list.list_chk > li .list_front {z-index:10; position:absolute; left:15px; top:50%; margin-top:-8px}
+.notice_list.list_chk .lef_date {float:none}
+.notice_list.list_chk .thum_img{width:70px; height:70px}
+
+/* 사진보관함 리스트 - 간편보기  */
+.list_thumb .label_box{position:relative; display:flex; align-items:center;  vertical-align:middle; height:16px; color:#222; font-size:1.4rem; line-height:16px; padding:0 0 0 22px; font-weight:500; font-family:"noto_m"; background:url("../img/ico_noimg.png") 50% 50% no-repeat; background-size:auto 30%}
+.list_thumb .label_box input[type="checkbox"]{display:none}
+.list_thumb .label_box input{position:absolute;opacity:0;cursor:pointer;height:0;width:0;}
+.list_thumb .label_box input:checked ~ .checkmark{background-color:#ee302a;border:1px solid #ee302a}
+.list_thumb .label_box input:checked ~ .checkmark:after{display: block;}
+.list_thumb .label_box .checkmark:after{left:4px;top:1px;width:4px;height:7px;border: solid white;border-width: 0 2px 2px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-border-radius:2px;border-radius:2px;}
+.list_thumb .label_box input:disabled ~ .checkmark{background-color:#ddd;border:1px solid #c5c5c5}
+.list_thumb .label_box input:disabled ~ .checkmark:after{display:block}
+.list_thumb > li {position:relative; display:flex; justify-content:space-between; align-items:stretch; flex-wrap:wrap; padding:15px; border:none}
+.list_thumb > li.function {padding:9px 15px; border-bottom:1px solid #c5c5c5}
+.list_thumb > li.function > .check_st01{margin-top:14px}
+.list_thumb > li.path {justify-content:flex-start; padding:14px 15px; font-family:"noto_m"; border-bottom:1px solid #c5c5c5;  }
+.list_thumb > li.path::before {content:"현위치 :"; display: inline-block; margin-right:4px; color:#344b72; font-family:"noto_b";}
+.list_thumb .list .label_box {padding:0; border:1px solid #ddd}
+.list_thumb .list .label_box img { display:inline-block; width:100%; height:auto; max-width:100%; max-height:100%; vertical-align: middle}
+.list_thumb.easy .label_box {margin-bottom:12px; width:calc((100% - 12px) / 2); height:44vw}
+.list_thumb.easy .label_box > .checkmark {position:absolute; top:12px; left:auto; right:12px}
+.list_thumb.easy .label_box > .txt {position:absolute; bottom:0; width:100%; padding:20% 10px 10px; color:#FFF; font-size:1.4rem; font-family:"noto_m"; letter-spacing:-0.05rem; background:-webkit-linear-gradient(top, rgba(0, 0, 0, 0.0) 39%, rgba(0, 0, 0, 0.8) 40%); background:-moz-linear-gradient(top, rgba(0, 0, 0, 0.0) 39%, rgba(0, 0, 0, 0.8) 40%); background:linear-gradient(to bottom, rgba(0, 0, 0, 0.0) 39%, rgba(0, 0, 0, 0.7) 40%); text-overflow:ellipsis; word-break:normal; white-space:nowrap; overflow:hidden}
+.list_thumb.detail .list {justify-content:flex-start; align-items: center; border-bottom:1px solid #c5c5c5}
+.list_thumb.detail .label_box {width:100px; height:100px}
+.list_thumb.detail .label_box > .checkmark {position:absolute; top:7px; left:auto; right:7px}
+.list_thumb.detail .list a{ padding-left:15px; width:calc(100% - 105px); vertical-align: middle}
+.list_thumb.detail .rit_list_txt{ float: none; padding:0; width:100%}
+
+/* 리스트 style 03 */
+.list_box {padding:0 15px}
+.list_box li {padding:20px 0; border-bottom:1px solid #C5C5C5}
+.list_header {display:flex; flex-wrap:wrap; align-items:stretch; width:100%;}
+.list_header dd {width:50%; color:#444; font-size:1.4rem; line-height:1.8rem; font-family:"noto_m"}
+.list_header .tit {position:relative; padding-right:9px; margin-right:7px; color:#222; font-family:"noto_b"}
+.list_header .tit::after {content:""; position:absolute; top:50%; right:0; display:block; margin-top:-5px; width:1px; height:10px; background-color:#CBC8C8}
+.list_box .txt {margin-top:10px; color:#444; font-size:1.4rem; line-height:1.4rem; font-family:"noto_m"; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+/* 카드 스타일 리스트 */
+.manage_list {height:100%; overflow-y:auto; background-color:#f8f9fb}
+.manage_list.bg_white {background-color:#FFF}
+.manage_list h4.head_tit {padding:1.6rem 1.5rem; color:#444; font-family:"noto_m"; font-weight:normal; letter-spacing:-0.05rem; border-bottom:1px solid #c5c5c5; background:#e1e7f1}
+.manage_list .head {display:flex ; justify-content:space-between; padding:1.6rem 1.5rem; color:#444; font-family:"noto_m"; border-bottom:1px solid #c5c5c5; background-color:#FFF}
+.manage_list .body > .head  {padding:0 0 1.5rem 0; background-color:transparent; border:none}
+.manage_list .body > .head.right {justify-content:flex-end}
+.manage_list .body > .head.left {justify-content:flex-start}
+.manage_list .body.w_full > .head {padding:0 1.5rem 1.5rem}
+.manage_list .head strong {color:#344b72}
+.manage_list .body {padding:15px 15px 30px 15px}
+.manage_list .body.w_full {padding:15px 0 30px}
+.manage_list .head.sign {display:flex; justify-content:center; flex-direction:column; align-items:center; padding:0 15px; margin-top:28px; height:auto; color:#666; font-family:"noto_m"; line-height:normal; border-bottom:none; background-color:transparent}
+.manage_list .head.sign h3 {margin-top:1rem; color:#344b72; font-size:1.6rem; font-family:"noto_b";}
+.edu_choice {padding:18px 0; margin:20px 15px 0; height:80px; text-align:center; background-color:#DDD; border-radius:20px 20px 0 0}
+.edu_choice h4 {margin-bottom:10px; color:#333; font-family:"noto_m";}
+.edu_choice .radio_st01 + .radio_st01 {margin-left:10px}
+.manage_list .sign_box {display:flex; align-items:center; justify-content:center; margin:28px 15px 0; height:calc(100vh - 240px); min-height:300px; border:2px solid #DDD; background-color:#FFF}
+.manage_list .edu_choice +.sign_box {margin-top:0; height:calc(100vh - 320px); }
+.manage_list .sign_box .pretxt { display: inline-block; color:#f5f5f5; font-size:3.0rem; font-family:"noto_b";}
+.btn_wrap.sign_btn {position:fixed; left:0; right:0; bottom:0; background-color:transparent}
+.sign_btn .ui_btn {height:50px; border-radius:0}
+.manage_list .content_box { border:1px solid #6b8bbc; background-color: #FFF;}
+.box_con {position:relative; padding:10px 10px; width:100%; background-color:#FFF; border:1px solid #6b8bbc}
+.box_con > .check_st01 {z-index: 100; position:absolute; top:15px; right:10px}
+.box_con + .box_con {margin-top:15px}
+.box_con .tit {position:relative; margin:0 0 8px 25px; color:#222; font-family:"noto_b"}
+.box_con .tit::before {content:""; position:absolute; left:-25px; top:3px; display:inline-block; width:18px; height:18px;  border-radius:50%}
+.box_con .tit.ing::before {background-color:#344b72}
+.box_con .tit.end::before {background-color:#bfc4cc}
+.box_con .txt {display:flex; color:#222; font-family:"noto_m"}
+.box_con .s_tit {height:2.7rem; line-height:2.7rem; white-space:nowrap}
+.box_con .s_tit.w-justify {width:50px; text-align:justify; letter-spacing: -0.2rem;}
+.box_con .s_tit.w-justify::after {content:""; display:inline-block; width:100%}
+.box_con .s_txt {position:relative; height: 2.7rem; color:#222; font-family:"noto_m"; line-height:2.7rem; }
+.box_con .s_tit + .s_txt::before,
+.box_con .s_tit2 + .s_txt::before {content:":"; margin:0 6px}
+.box_con .s_txt + .s_tit::before,
+.box_con .s_txt + .s_txt::before {content:""; display:inline-block; margin:0 8px; width:1px; height:10px; background-color:#cbcbcb }
+.box_con.detail .txt {margin-left:0}
+.box_con.detail .img_box {margin-top:15px; width:100%; height:300px; background-color:#FFF; border:1px solid #DDD; text-align:center; vertical-align:middle; background:url("../img/ico_noimg.png") 50% 50% no-repeat; background-size:auto 30%}
+.box_con.detail .img_box img {max-width:100%; max-height:100%}
+
+/* 카드 스타일  - 신규자 관리대장 */
+.box_con.worker .name {position:relative; margin:0 0 8px 0; color:#222; font-family:"noto_b"}
+.box_con.worker .name.condition { display: inline-block; margin-top:6px}
+.box_con.worker .name.condition.ing {color:#444}
+.box_con.worker .name.condition.ing::before {content:"근무가능 확인중"}
+.box_con.worker .name.condition.ok {color:#344b72}
+.box_con.worker .name.condition.ok::before {content:"근무가능"}
+.box_con.worker .name.condition.ng {color:#ee302a}
+.box_con.worker .name.condition.ng::before {content:"근무불가능"}
+.box_con.worker .mark {display:inline-block; margin-left:6px;width:18px; height:18px; border-radius:50%; vertical-align:middle}
+.box_con.worker .mark.blue {background-color:#344b72}
+.box_con.worker .mark.red {background-color:#ee302a}
+.box_con.worker .txt {margin-left:0;}
+.box_con.worker .txt_boxing {padding:15px;margin:0 -10px -15px -10px; color:#444; font-size:1.3rem; font-family:"noto_m"; line-height:1.8rem; background-color:#ebebeb; border:none}
+.box_con.worker.detail .txt_boxing {margin:0; font-size:1.4rem; background-color:transparent; border:1px solid #c5c5c5}
+.box_con.worker.detail .txt_boxing textarea {height:3rem; min-height:3rem}
+.box_con.worker.detail .txt_boxing textarea {height:3rem; min-height:3rem}
+.box_con.worker.detail .report_box {display:flex; flex-wrap:wrap; padding:15px; margin-top:15px; line-height:2.0rem;  background-color:#f5f5f5; border:1px solid #c5c5c5}
+.box_con.worker.detail .report_box span {display:inline-block; color:#444; width:80%; font-family:"noto_m"; line-height:2.6rem}
+.box_con.worker.detail .report_box p {display:inline-block; width:20%; color:#4574bc; font-family:"noto_m"; line-height:2.6rem; text-align:right}
+.blood_report {display:flex; align-items:center; height:72px; border:1px solid #c5c5c5}
+.blood_report .blood_thumb {display:flex; align-items:center; margin-left:10px; width:60px; height:60px; border:1px solid #DDD; text-align:center; vertical-align:middle; }
+.blood_report .blood_thumb img {max-width:100%; max-height:100%}
+.blood_report .blood_txt{display:flex; justify-content:flex-start; flex-wrap:wrap; margin-left:30px; width:calc(100vw - 223px);  vertical-align: middle}
+.blood_report .blood_txt .sub_tit,
+.blood_report .blood_txt .sub_txt {display:inline-block; font-family:"noto_m"; line-height:2.4rem; vertical-align:middle}
+.blood_report .blood_txt .sub_tit {position:relative; padding-right:20px}
+.blood_report .blood_txt .sub_tit::after {content:""; position:absolute; display:block; right:10px; top:3px; width:1px; height: 13px;  background-color:#CCC}
+.blood_report .blood_txt .sub_txt {width:calc(100% - 60px)}
+.blood_report .btn_file_delete {width:72px; height:100%; border-width:0 0 0 1px; border-color:#c5c5c5;}
+
+/* 카드 스타일 리스트 - TMB*/
+.manage_list .head_date {position:relative; display:flex;justify-content:center; align-items:center; padding:26px 1.5rem; color:#444; font-family:"noto_m"; border-bottom:1px solid #c5c5c5; background-color:#FFF}
+.manage_list .head_date h3 {color:#222; font-size:1.6rem}
+input.ipt_date {position:relative; display:inline-block; margin-left:10px; width:30px; height:30px; font-size:0; border:1px solid #c5c5c5; border-radius:50%; background: url("../img/icon_calendar.jpg") center center no-repeat #FFF; vertical-align:middle; background-size:50%}
+.box_con.tmb .tit {color:#344b72; font-size:1.6rem; font-family:"noto_b";}
+.box_con.tmb .tit, 
+.box_con.tmb .txt {margin-left:0; width:64%}
+.box_con.tmb .s_tit, 
+.box_con.tmb .s_txt {height:auto; line-height:3.8rem}
+.box_con.tmb .s_txt {position:relative; margin-left:16px; padding-left:16px; font-size: 1.5rem}
+.box_con.tmb .s_tit + .s_txt::before {content:""; position:absolute; display:block; left:-4px; top:13px;  width:1px; height:13px; font-size:0; background-color: #cbcbcb}
+.box_con.tmb .sum_rate {position:absolute; display:flex; align-content:center; align-items:center; justify-content:center; flex-wrap:wrap; right:0; top:15px; bottom:15px; width:33%; font-size:2.6rem; font-family:"noto_b"; line-height:3.4rem; text-align:center; letter-spacing:-0.1rem; border-left:1px solid #DDD}
+.box_con.tmb .sum_rate::before {content:"참석률"; display:block; margin:-8px 0 0 0; width:100%; color:#444; font-size:1.3rem;letter-spacing:0; font-family:"noto_m"; line-height:1.4rem}
+.box_con.tmb .sum_rate::after {content:"%"; display:block; margin:8px 0 0 2px; font-size:1.2rem; font-family:"noto_m"; line-height:1.4rem}
+.box_con.tmb .sum_rate.over {color:#4574bc}
+.box_con.tmb .sum_rate.under {color:#ee302a}
+.box_con.tmb.sum .sum_rate {right:15px; top:50%; margin-top:-40px; width:80px; height:80px; color:#FFF; font-size:3.0rem; font-family:"noto_b"; line-height:3.4rem; text-align:center; letter-spacing:-0.1rem; border-radius:50%}
+.box_con.tmb.sum {padding:22px 10px}
+.box_con.tmb.sum .txt + .txt {margin-top:2px}
+.box_con.tmb.sum .s_tit {color:#344b72; font-size:1.6rem; font-family:"noto_b";}
+.box_con.tmb.sum .s_tit + .s_txt::before {content:""; position:absolute; display:block; left:-4px; top:13px; width:1px; height:13px; font-size:0; background-color: #344b72}
+.box_con.tmb.sum .sum_rate::before {color:#FFF}
+.box_con.tmb.sum .sum_rate.over {background-color:#4574bc}
+.box_con.tmb.sum .sum_rate.under {background-color:#ee302a}
+
+/* 카드 스타일  - 이미지 보기 */
+.box_con.pic_view {position:relative; display:flex; justify-content:space-between; align-items:stretch; flex-wrap:wrap; padding:0; margin-top:10px; border:none}
+.box_con.pic_view .label_box {position:relative; display:flex; align-items:center; margin-bottom:12px; width:100%; height:70vw; vertical-align:middle;  background:url("../img/ico_noimg.png") 50% 50% no-repeat; background-size:auto 30%; border:1px solid #ddd}
+.box_con.pic_view .label_box img {display:inline-block; width:100%; height:auto; max-width:100%; max-height:100%; vertical-align:middle}
+.box_con.pic_view .label_box > .checkmark {position:absolute; top:12px; left:auto; right:12px}
+.box_con.pic_view .label_box input[type="checkbox"]{display:none}
+.box_con.pic_view .label_box input{position:absolute;opacity:0;cursor:pointer;height:0;width:0;}
+.box_con.pic_view .label_box input:checked ~ .checkmark{background-color:#ee302a;border:1px solid #ee302a}
+.box_con.pic_view .label_box input:checked ~ .checkmark:after{display: block;}
+.box_con.pic_view .label_box .checkmark:after{left:4px;top:1px;width:4px;height:7px;border: solid white;border-width: 0 2px 2px 0;-webkit-transform: rotate(45deg);-ms-transform: rotate(45deg);transform: rotate(45deg);-webkit-border-radius:2px;border-radius:2px;}
+.box_con.pic_view .label_box input:disabled ~ .checkmark{background-color:#ddd;border:1px solid #c5c5c5}
+.box_con.pic_view .label_box input:disabled ~ .checkmark:after{display:block}
+
+
+/* 정렬 List */
+.list_sort {display: flex;justify-content:space-between; align-items:center; padding:10px 60px 10px 10px; border-bottom:1px solid #cbcbcb; background-image:url("../img/ico_drag_gy.png"); background-position: 98% center ; background-repeat:no-repeat; background-size:17px auto}
+.list_sort.head {background-image:none}
+.list_sort.head .tit:nth-child(2),
+.list_sort.head .tit:nth-child(3) {margin-right:10px}
+.list_sort strong {}
+.list_sort .tit {display:inline-block; height:3rem;; font-size:1.4rem; line-height:3rem; font-family:"noto_m"}
+.list_sort .tit:nth-child(1) {min-width:20vw}
+.list_sort.active {border:1px solid #344b72; background-image:url("../img/ico_drag_bl.png"); box-shadow: 0 0 10px rgba(9,2,4,.3) }
+
+/** 08.21 **/
+.rit_list_txt.n_ty01 {
+	width: calc(100% - 120px);
+	padding-left: 0px;
+}
+.rit_list_txt.n_ty01 li strong{
+	width:70px;display:block;font-size:1.4rem;color:#222;float:left;font-family: 'noto_b';padding-left: 10px;
+}
+.rit_list_txt.n_ty01 li span{
+	width:calc(100% - 70px);display:block;color:#444;font-size:1.4rem;float:left;
+	padding-left:10px;position:relative;font-weight:500;font-family: 'noto_m';
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.rit_list_txt.n_ty01 p {
+	margin-left: 10px;
+}
+
+.rit_list_txt.n_ty01 .n_ui_btn1{
+	position: relative;
+    display: inline-block;
+    font-size: 13px;
+    font-family: "noto_m";
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 2px;
+    cursor: pointer;
+	padding-left: 7px;
+	padding-right: 7px;
+	margin-top: 10px;
+    width: auto;
+    height: 30px;
+    color: #4572bf;
+    line-height: 25px;
+    background-color: #FFF;
+    border: 1px solid #4572bf;
+    margin-left: 10px;
+}
+
+.n_checkbox_t1 {
+	position: relative;
+	display: block;
+	padding: 15px 15px;
+	text-align: right;
+    border-bottom: 1px solid #c5c5c5;
+}

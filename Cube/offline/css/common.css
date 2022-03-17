@@ -1,0 +1,45 @@
+@charset "utf-8";
+
+@import url("webfonts.css");
+@import url("resets.css");
+@import url("_helps.css");
+@import url("_button.css");
+@import url("_form.css");
+@import url("_table.css");
+@import url("_list.css");
+@import url("_view.css");
+@import url("_popup.css");
+@import url("_typo.css");
+@import url("style_ms.css");
+@import url("style_bw.css");
+
+html {font-size:10px}
+body{font-size: 1.4rem; color:#111; -webkit-overflow-scrolling:touch}
+
+/* ----------------------------------------------------------
+     Layout
+---------------------------------------------------------- */
+.kccWrap {position:relative; width:100%; height:100%;}
+.kccHeader {padding:0 1rem; height:6rem; display:flex; justify-content:space-between; align-items:center; background-color:#344b72}
+.kccafooter {width:100%; display:flex; justify-content:space-around; align-items:center; background:#344b72}
+.kccContent {padding:6rem 0 5rem; height:100vh; overflow-y:auto}
+.kccContent.full_h {padding-bottom:0}
+
+/* ----------------------------------------------------------
+    Header
+---------------------------------------------------------- */
+.header_wrap {z-index:20; position:fixed; top:0; left:0; width:100%; height:6rem}
+.header_wrap .header_inner {width:8.4rem}
+.header_wrap .header_inner:first-of-type {text-align:left}
+.header_wrap .header_inner:last-of-type {text-align:right}
+.header_wrap h2 {color:#FFF}
+.header_wrap .logo {width:6.5rem; height:auto}
+.hader_layer {z-index:20; display:none; position:fixed; width:100%; height:100%; top:0; left:0; background-color:rgba(0,0,0,0.7)}
+.hader_layer::before {content:" "; position: absolute; display: block; top:20px; right:15px;; width:22px; height:22px; background: url("../img/ico_close.png") 0 0 no-repeat; background-size:contain}
+.hader_layer.on {display:block}
+
+/* ----------------------------------------------------------
+     Footer
+---------------------------------------------------------- */
+.footer_wrap {z-index:10; position:fixed; bottom:0; left:0; width:100%; height:5rem; color:#000; font-size:1rem; font-family:"noto_m"; -webkit-transform:translate3d(0,0,0); transform:translate3d(0,0,0); -webkit-transition:all .3s ease-out; transition:all .3s ease-out}
+.footer_wrap .ui_btn {height: 50px}

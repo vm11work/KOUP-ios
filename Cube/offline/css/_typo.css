@@ -1,0 +1,34 @@
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * Typo
+  * ----------------------------------------------------------
+ */
+
+/*  NotoSansKR */
+.noto_r{font-family:"noto_r"}
+.noto_m{font-family:"noto_m"}
+.noto_b{font-family:"noto_b"}
+
+/* Title */
+h2 {color:#222; font-size:1.6rem; line-height:1.6rem}
+h3 {color:#222; font-size:1.5rem; line-height:1.5rem}
+h4 {color:#222; font-size:1.4rem; line-height:1.4rem}
+h2.title {padding-bottom:6px; margin:20px 0 10px; color:#999; letter-spacing:-0.05rem; border-bottom:1px solid #DDD}
+.title + .form_guide,
+.title + .form_half {margin-top:0 !important}
+
+/* Txt Box */
+div.txt_box {position:relative; display:inline-block; padding:14px 10px; width:100%; height:auto; color:#222; font-size:1.4rem;  background-color:#fff; border:1px solid #c5c5c5; line-height:2.2rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+div.txt_box.multi_line {padding:10px 15px; height:auto; line-height:2.2rem; overflow:auto; white-space:normal; word-break: keep-all}
+p.txt_box {position:relative; display:inline-block; padding:0 15px; width:100%; height:auto; color:#222; font-size:1.4rem;  background-color:#fff; line-height:2.2rem; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+p.txt_box.bdr::before{content:""; position:absolute; left:0; top:50%; margin-top:-9px; display:block; width:1px; height:18px; background-color:#CCC}
+p.txt_box.multi_line {padding:10px 15px; height:auto; line-height:2.2rem; overflow:inherit; white-space:normal; word-break:normal; text-overflow:inherit}
+
+/* Ellipsis for 1 line */
+.ellipsis1 {overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+
+/* Ellipsis for 2 line */
+.ellipsis2 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box !important; white-space:normal !important; word-wrap:break-word; -webkit-line-clamp:2; -webkit-box-orient:vertical}
+
+/* Ellipsis for 3 line */
+.ellipsis3 {overflow:hidden; text-overflow:ellipsis; display:-webkit-box !important; white-space:normal !important; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical}

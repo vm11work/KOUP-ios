@@ -1,0 +1,59 @@
+@charset "utf-8";
+/** ----------------------------------------------------------
+  * Table
+  * ----------------------------------------------------------
+*/
+
+/* table style 01 */
+.table_st01{width:100%;border:1px solid #cbcbcb;}
+.table_st01 th{font-size:1.4rem;color:#222;line-height:20px;text-align:center;background-color:#f6f6f6;padding:13px 10px;font-weight:bold;border:1px solid #cbcbcb;border-width:0 1px 1px 0}
+.table_st01 td{z-index:1; font-size:1.4rem;color:#222;line-height:20px;text-align:center;background-color:#fff;padding:13px 10px;border:1px solid #cbcbcb;border-width:0 1px 1px 0}
+
+.tbl_view {width:100%; table-layout:fixed}
+.tbl_view tr {border-bottom:1px solid #DDD}
+.tbl_view th, .tbl_view td {height:48px; font-family:"noto_m"; vertical-align: middle}
+.tbl_view th {padding-left:15px; color:#222; text-align:left}
+.tbl_view td {padding:10px 15px; color:#333;; text-align:left}
+.tbl_view th + td {padding-left:0}
+.tbl_view .txt {display:inline-block; font-size:1.4rem; vertical-align:middle}
+.tbl_row {width:100%; table-layout:fixed}
+.tbl_row tr {border:none;}
+.tbl_row th,
+.tbl_row td {z-index:1; padding:3px 0}
+.tbl_row .img_box {width:100%; height:190px; background-color:#FFF; border:1px solid #DDD; text-align:center; vertical-align:middle; background:url("../img/ico_noimg.png") 50% 50% no-repeat; background-size:auto 30%}
+.tbl_row .img_box img {max-width:100%; max-height:100%}
+.tbl_row .img_box.photo_regi {position:relative; background:url("../img/ico_camera_lgy.png") 50% 50% no-repeat}
+.photo_regi > .function_layer {left:50%; top:30%; right: auto; margin-left:-80px}
+.require-mark {position:relative; width:0; height:0; font-size:0; line-height:0; vertical-align:top;display:inline-block;}
+.require-mark::after {position:absolute; content:"*"; top:8px; right:-8px; color:#f47920; font-style:normal; font-size:1.4rem}
+
+.btn_tbl_del_1 {
+    position: absolute;
+    top:-1px;
+    left: -1px;
+    width: 32px;
+    height: 32px;
+    background: url("../img/ic_clear_48dp.png") center center no-repeat;
+    background-size: 60%;
+    background-color: rgba(255, 255, 255, 1);
+    border:1px solid #bbbbbb;
+    cursor: pointer;
+    z-index: 1;
+}
+.n_regi_txt_1 {
+	margin-left: 5px;
+	color: #666;
+}
+.btn_tbl_del_2 {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    width: 20px;
+    height: 20px;
+    background: url("../img/ic_clear_48dp.png") center center no-repeat;
+    background-size: 85%;
+    background-color: rgba(255, 255, 255, 1);
+    border:1px solid #bbbbbb;
+    cursor: pointer;
+    z-index: 1;
+}

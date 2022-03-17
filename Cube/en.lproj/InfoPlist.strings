@@ -1,0 +1,8 @@
+//"CFBundleName" = "KOUP";  //build scheme별 다르게 적용됨.
+//"CFBundleDisplayName" = "KOUP";  //build scheme별 다르게 적용됨.
+
+
+"NSCameraUsageDescription" = "Use only take phone and upload";
+"NSPhotoLibraryUsageDescription" = "Use only take phone and upload";
+"NSLocationAlwaysUsageDescription" = "Use only contents recommendation service";
+"NSLocationWhenInUseUsageDescription" = "Use only contents recommendation service";

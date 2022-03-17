@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <!-- SEO START -->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="KCC">
+    <meta property="og:title" content="KCC">
+    <meta property="og:description" content="PMIS">
+    <meta property="og:image" content="img/default.png">
+    <meta property="og:url" content="/">
+    <meta name="keywords" content="KCC">
+    <meta name="description" content="PMIS">
+    <title>재해예방조치요청 | KCC 모바일 현장 협업 시스템</title>
+    <!-- SEO END -->
+    <!-- css resources -->
+    <link href="css/swiper.min.css" rel="stylesheet">
+    <link href="css/common.css" rel="stylesheet" />
+<!-- jquery & plug-in -->
+<script src="js/jquery-3.4.1.min.js"></script>
+<script src="js/jutils-20200826.js"></script>
+<script src="js/jutils-offline-20200826.js"></script>
+<script language = "javascript">
+<!--
+///////////////////////
+
+$(document).ready (function () 
+{
+	try
+	{
+		var check = window.location.href.split ("?");
+		if (check [1]) offlinePreventAskEdit (check [1])
+	} catch (e) { console.log (e); }
+});
+
+function offlinePreventAskEdit (name)
+{
+	try
+	{
+	    JData.get ({
+	        name : name,
+	        error: function (response) 
+	        {
+                console.log ("error => " + response);
+	        },
+	        success: function (response) 
+	        {
+                var json = JSON.parse (response); var value = json ["response"];
+        	    if (0 < json.response.length) 
+        	    {
+        	    	var menu = json ["response"][0]["menu"];
+        	    	var name = json ["response"][0]["name"];
+        	    	var thumb = json ["response"][0]["thumb"];
+	                JUtil.set ("offline_menu", menu);
+	                JUtil.set ("offline_name", name);
+	                $("#thumb").attr ("src", thumb);
+
+	                var data = JSON.parse (json ["response"][0]["data"]);
+	                JUtil.set ("deadline", data ["deadline"]);
+	                JUtil.set ("title", data ["title"]);
+	                JUtil.set ("content", data ["content"]);
+	                JUtil.set ("image", data ["image"]);
+	                JUtil.set ("voice", data ["voice"]);
+	                
+	                if (JUtil.get ("image"))
+					{
+	                    $("#thumb").show ();
+		                $("#thumb").attr ("src", thumb);
+	            	    $('#delete_image').show ();
+					}
+	                
+	                if (JUtil.get ("voice"))
+					{
+		                $("#voice_toggle").css ("opacity", 1);
+		                $("#voice_toggle").attr ("disabled", false);
+
+		                $('#info_voice').show ();
+		        		JUtil.set ("info_voice", data ["voice"] + " " + stub_info_voice);
+					}
+				}
+                console.log ("success => " + response);
+	        }
+	    });
+	} catch (e) { console.log (e); }
+}
+//-->
+</script>
+</head>
+
+<body>
+
+    <div id="kccWrap">
+        
+        <!-- header -->
+        <header class="header_wrap">
+            <div class="kccHeader">
+                <div class="header_inner">
+                    <button type="button" class="btn nav_btn ico_hback" onclick="JNative.go ('prevent-ask-list.htm')">뒤로</button>
+                </div>
+                <h2>재해예방조치요청</h2>
+                <div class="header_inner">  
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <!-- Main content Block -->
+        <div class="kccContent" name="content">
+			<h3 class="title pl10 mt20">재해예방조치요청</h3>
+            
+            <!-- 재해예방조치요청  -->
+<form id = "frm_offline_seed" name = "frm_offline_seed">
+<input type="hidden" id="offline_menu" name="offline_menu" value="prevent-ask">
+<input type="hidden" id="offline_name" name="offline_name" value="">
+<input type="hidden" id="offline_name" name="offline_done" value="prevent-ask-list.htm">
+</form>
+<form id = "frm_offline_data" name = "frm_offline_data">
+<input type="hidden" id="image" name="image">
+<input type="hidden" id="voice" name="voice">
+            <table class="tbl_view mt10 mb20">
+                <colgroup>
+                    <col style="width:95px">
+                    <col style="width:auto">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="row">조치자</th>
+                        <td>
+                            <input type="search" disabled>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2" class="bg_gray">
+                            <table class="tbl_row">
+                                <colgroup>
+                                    <col style="width:auto">
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            요청사항<em class="require-mark">필수</em>
+                                            <div class="function_box" style="display: block; height: 32px;">
+                                                <button id="icon_camera" type="button" class="btn contents_btn round ico_camera_bk" onclick="$('#menu_camera').show (); $('#icon_camera').hide ();">카메라</button>
+                                                
+                                                    <!-- 카메라 Layer Popup -->
+                                                    <div id="menu_camera" class="function_layer" style="display: none;">
+                                                        <button type="button" class="btn_layer_close" onclick="$('#menu_camera').hide (); $('#icon_camera').show ();" ></button>
+                                                        <button type="button" class="btn contents_btn layer ico_camera_bk2" onclick="offlineImageCamera ();"><span class="txt">촬영</span></button>
+                                                        <button type="button" class="btn contents_btn layer ico_picture_bk2" onclick="offlineImagePhoto ();"><span class="txt">갤러리</span></button>
+                                                    </div>
+                                                    <!-- //카메라 Layer Popup -->
+                                              </div>
+                                           </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="img_box photo_regi">
+                                            <button id="delete_image" type="button" class="btn_tbl_del_1" title="삭제" onclick="offlineImageDelete ();" style="display: none;"></button>
+                                            <img id="thumb" style="display: none;"/>
+                                            </div>
+                                      </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            요청내용
+                                            <span id="info_voice" class="n_regi_txt_1" style="display: none;">파일명 <button id="delete_voice" type="button" class="btn_tbl_del_2" title="삭제" onclick="offlineVoiceDelete ();"></button></span>
+                                            <div class="function_box" style="display: block; height: 32px;">
+                                                 <button id="icon_voice" type="button" class="btn contents_btn round ico_mike_bk" onclick="$('#menu_voice').show (); $('#icon_voice').hide ();">마이크</button>
+                                                
+                                                    <!-- 오디오 Layer Popup -->
+                                                    <div id="menu_voice" class="function_layer" style="display: none;">
+                                                        <button type="button" class="btn_layer_close" onclick="$('#menu_voice').hide (); $('#icon_voice').show ();"></button>
+                                                        <button type="button" class="btn contents_btn layer ico_mike_bk2" onclick="offlineVoiceRecord ();"><span class="txt">녹음 하기</span></button>
+                                                        <button id="voice_toggle" type="button" class="btn contents_btn layer ico_listen_bk2" onclick="offlineVoiceToggleWrite ();" disabled style="opacity: 0.3;"><span id="status_voice" class="txt">녹음 듣기</span></button>
+                                                    </div>
+                                                    <!-- //오디오 Layer Popup -->
+                                              </div>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+<textarea id="content" name="content" rows="3" class="textarea_st01"></textarea>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">조치기한</th>
+                        <td>
+<select id="deadline" name="deadline" class="select_basic w-30">
+<option selected value="7">7일</option>
+<option value="6"> 6일</option>
+<option value="5"> 5일</option>
+<option value="4"> 4일</option>
+<option value="3"> 3일</option>
+<option value="2"> 2일</option>
+<option value="1"> 1일</option>
+</select>
+                        </td>
+                    </tr>
+                    <!-- 
+                    <tr>
+                        <th scope="row">태그</th>
+                        <td>
+                            <input type="search" disabled>
+                        </td>
+                    </tr>
+                     -->
+                </tbody>
+                </table>
+</form>
+            <!--// 재해예방조치요청  -->
+            
+        </div>
+        <!--// Main content Block -->
+
+        <!-- footer -->
+        <footer class="footer_wrap">
+            <div class="kccafooter">
+                <button type="button" class="btn footer_btn ico_list" onclick="JNative.go ('index.htm')"><span class="txt">메뉴</span></button>
+				<button type="button" class="btn footer_btn ico_save" onclick="offlineDataSet ();"><span class="txt">임시 저장</span></button>
+            </div>
+        </footer>
+        <!--// footer -->
+    </div>
+</body>
+</html>
+
+
+
+
+
